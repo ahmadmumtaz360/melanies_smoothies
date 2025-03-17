@@ -54,4 +54,7 @@ if ingredients_list:
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
         
+        # Debug statement to check the value of name_on_order
+        st.write(f"Debug: name_on_order = {name_on_order}")
+        
         st.success(f'Your Smoothie is ordered, {name_on_order}!', icon="✅")
